@@ -12,11 +12,14 @@
     <p>
       부모에서 숫자를 보여줍니다. : {{count}}
     </p>
+
+    <!-- @provide -->
+    <Children @counter="counter" />
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Provide } from 'vue-property-decorator';
 import Message from '@/components/Message.vue';
 import Children from '@/components/Children.vue';
 
@@ -38,5 +41,7 @@ export default class Home extends Vue {
   counter() {
     this.count ++
   }
+
+  @Provide('message') msg: string = 'provide/inject example'
 }
 </script>

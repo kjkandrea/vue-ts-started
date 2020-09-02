@@ -2,8 +2,16 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <Message />
+
+    <!-- @Watch -->
     <Children :parentMessage="message" />
     <button @click="changeMessage">메시지를 바꾸어줄게요.</button>
+
+    <!-- @emit -->
+    <Children @counter="counter" />
+    <p>
+      부모에서 숫자를 보여줍니다. : {{count}}
+    </p>
   </div>
 </template>
 
@@ -23,6 +31,12 @@ export default class Home extends Vue {
 
   public changeMessage() {
     this.message = 'Changed Message from Method';
+  }
+
+  count: number = 0
+
+  counter() {
+    this.count ++
   }
 }
 </script>

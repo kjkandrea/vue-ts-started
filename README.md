@@ -107,3 +107,15 @@ export default class Message extends Vue {
   public message: string = '';
 }
 ```
+
+### @Component
+
+### @Prop
+
+### @Watch
+
+### @Emit
+
+### @Provide/inject
+
+### @Model

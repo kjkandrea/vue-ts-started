@@ -22,18 +22,18 @@ import { Component, Prop, Vue , Watch, Emit, Model, Inject} from 'vue-property-d
 @Component
 export default class Children extends Vue {
   @Prop() public parentMessage?: string;
-  alertMessage: string = ''
+  public alertMessage: string = '';
+
+  @Inject() public readonly message!: string;
 
   @Watch('parentMessage')
-  update(value:string, oldValue:string) {
-    this.alertMessage = '메시지를 업데이트 하였습니다.'
+  public update(value: string, oldValue: string) {
+    this.alertMessage = '메시지를 업데이트 하였습니다.';
   }
 
   @Emit()
-  counter() {
-    console.log('counter click. emit event')
+  public counter() {
+    console.log('counter click. emit event');
   }
-
-  @Inject() readonly message!: string
 }
 </script>

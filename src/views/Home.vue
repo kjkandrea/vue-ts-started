@@ -32,16 +32,16 @@ import Children from '@/components/Children.vue';
 export default class Home extends Vue {
   public message: string = 'Hello, Prop!';
 
+  public count: number = 0;
+
+  @Provide('message') public msg: string = 'provide/inject example';
+
   public changeMessage() {
     this.message = 'Changed Message from Method';
   }
 
-  count: number = 0
-
-  counter() {
-    this.count ++
+  public counter() {
+    this.count ++;
   }
-
-  @Provide('message') msg: string = 'provide/inject example'
 }
 </script>

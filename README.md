@@ -10,6 +10,11 @@ npm install
 npm run serve
 ```
 
+### lint 체크 및 수정
+```
+vue-cli-service lint
+```
+
 ## vue-cli 인스톨 설정
 
 `?` Check the features needed for your project: 

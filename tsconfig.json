@@ -5,7 +5,7 @@
     "strict": true,
     "jsx": "preserve",
     "importHelpers": true,
-    "moduleResolution": "node",
+    "moduleResolution": "node", // 모듈 해석 방식
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -27,7 +27,7 @@
       "scripthost"
     ]
   },
-  "include": [
+  "include": [ // 해당 path에 위치한 파일들을 js로 build
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",

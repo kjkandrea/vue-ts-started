@@ -44,3 +44,7 @@ by default):
 `?` Where do you prefer placing config for Babel, ESLint, etc.? 
 **In dedicated confi
 g files**
+
+## Decorator?
+
+어노테이션이 아닙니다. 그냥 함수 입니다.

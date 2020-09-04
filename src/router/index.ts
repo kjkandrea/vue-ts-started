@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 import Home from '../views/Home.vue';
 import VuexUse from '../views/VuexUse.vue';
-import VuexModule from '../views/VuexModule.vue'
+import VuexModule from '../views/VuexModule.vue';
 
 Vue.use(VueRouter);
 
@@ -28,8 +28,8 @@ const routes: RouteConfig[] = [
   {
     path: '/vuex-module',
     name: 'VuexModule',
-    component: VuexModule
-  }
+    component: VuexModule,
+  },
 ];
 
 const router = new VueRouter({

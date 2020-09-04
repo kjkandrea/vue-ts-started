@@ -7,9 +7,8 @@
 </template>
 
 <script lang="ts">
-
 import { Component, Vue } from 'vue-property-decorator';
-import Count from '@/components/Count.vue'
+import Count from '@/components/Count.vue';
 
 @Component({
   components: {
@@ -18,13 +17,12 @@ import Count from '@/components/Count.vue'
 })
 
 export default class VuexUse extends Vue {
-  increase() {
-    this.$store.dispatch('increase')
+  public increase() {
+    this.$store.dispatch('increase');
   }
 
-  decrease() {
-    this.$store.dispatch('decrease')
+  public decrease() {
+    this.$store.dispatch('decrease');
   }
 }
-
 </script>

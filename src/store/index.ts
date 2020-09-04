@@ -1,19 +1,19 @@
 import Vue from 'vue';
 import Vuex, {ActionContext, StoreOptions} from 'vuex';
-import moduleA from './moduleA.store'
-import moduleB from './moduleB.store'
+import moduleA from './moduleA.store';
+import moduleB from './moduleB.store';
 
 Vue.use(Vuex);
 
 export interface State {
-  data: string
-  count: number
+  data: string;
+  count: number;
 }
 
 const store: StoreOptions<State> = {
   modules: {
     moduleA,
-    moduleB
+    moduleB,
   },
   state: {
     data: 'root',
@@ -21,7 +21,7 @@ const store: StoreOptions<State> = {
   },
   mutations: {
     setData(state, data: string) {
-      state.data = data
+      state.data = data;
     },
     setCount(state, count: number) {
       state.count = count;
@@ -29,7 +29,7 @@ const store: StoreOptions<State> = {
   },
   actions: {
     setRootData({commit}, data: string) {
-      commit('setData', data)
+      commit('setData', data);
     },
     increase({state, commit}: ActionContext<State, State>) {
       commit('setCount', state.count + 1);

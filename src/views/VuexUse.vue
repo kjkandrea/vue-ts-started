@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { Action, Mutation } from 'vuex-class'
+import { Action, Mutation } from 'vuex-class';
 import Count from '@/components/Count.vue';
 
 @Component({
@@ -21,8 +21,8 @@ import Count from '@/components/Count.vue';
 })
 
 export default class VuexUse extends Vue {
-  @Mutation readonly setCount
-  @Action readonly increase
-  @Action readonly decrease
+  @Mutation public readonly setCount;
+  @Action public readonly increase;
+  @Action public readonly decrease;
 }
 </script>

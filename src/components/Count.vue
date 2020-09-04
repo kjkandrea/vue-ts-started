@@ -9,13 +9,13 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import { State, Getter } from 'vuex-class'
+import { Component, Vue } from 'vue-property-decorator';
+import { State, Getter } from 'vuex-class';
 
 @Component
 export default class Count extends Vue {
-  @State readonly count!: number
-  @Getter readonly getCount!: number
+  @State public readonly count!: number;
+  @Getter public readonly getCount!: number;
 
 }
 </script>

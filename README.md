@@ -133,3 +133,9 @@ npm install vuex-module-decorators
 ```
 
 doc : [github: vuex-module-decorators](https://github.com/championswimmer/vuex-module-decorators)
+
+### vuex-class
+
+```
+npm install vuex-class
+```

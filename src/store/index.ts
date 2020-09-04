@@ -42,7 +42,7 @@ const store: StoreOptions<State> = {
   },
   getters: {
     data: (state) => state.data,
-    count: (state: State) => state.count,
+    getCount: (state: State) => state.count,
   },
 };
 

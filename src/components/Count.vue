@@ -1,11 +1,21 @@
 <template>
   <div>
     {{ $store.getters.count }}
+    <div>
+      <p>state: {{ count}}</p>
+      <p>getter : {{ getCount }}</p>
+    </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import { State, Getter } from 'vuex-class'
 
-export default class Count extends Vue {}
+@Component
+export default class Count extends Vue {
+  @State readonly count!: number
+  @Getter readonly getCount!: number
+
+}
 </script>

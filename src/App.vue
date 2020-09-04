@@ -3,7 +3,8 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/terms">Terms</router-link> |
-      <router-link to="/vuex">Vuex</router-link>
+      <router-link to="/vuex">Vuex</router-link> |
+      <router-link to="/vuex-module">VuexModule</router-link>
     </div>
     <router-view/>
   </div>

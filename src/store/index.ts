@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex, {ActionContext, StoreOptions} from 'vuex';
 import moduleA from './moduleA.store';
 import moduleB from './moduleB.store';
+import moduleDecorator from '@/store/moduleDecorator.store';
 
 Vue.use(Vuex);
 
@@ -14,6 +15,7 @@ const store: StoreOptions<State> = {
   modules: {
     moduleA,
     moduleB,
+    moduleDecorator,
   },
   state: {
     data: 'root',

@@ -123,3 +123,13 @@ export default class Message extends Vue {
 ### @Mixin
 
 [mixin-example](https://github.com/kjkandrea/mixin-example)
+
+## Vuex
+
+### vuex-module-decorators
+
+```
+npm install vuex-module-decorators
+```
+
+doc : [github: vuex-module-decorators](https://github.com/championswimmer/vuex-module-decorators)

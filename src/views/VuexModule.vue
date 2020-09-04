@@ -17,6 +17,7 @@ export default class VuexModule extends Vue {
     this.$store.dispatch('setRootData', '멈무 Root~~');
     this.$store.dispatch('moduleA/setRootData', '멈무 A~~');
     this.$store.dispatch('moduleB/setRootData', '멈무 B~~');
+    this.$store.dispatch('moduleDecorator/editData', '멈무 module decorator~~');
   }
 }
 </script>

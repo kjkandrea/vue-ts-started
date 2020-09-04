@@ -119,3 +119,7 @@ export default class Message extends Vue {
 ### @Provide/inject
 
 ### @Model
+
+### @Mixin
+
+[mixin-example](https://github.com/kjkandrea/mixin-example)

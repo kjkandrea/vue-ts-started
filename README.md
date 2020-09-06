@@ -108,6 +108,89 @@ export default class Message extends Vue {
 }
 ```
 
+### 클래스 기반 컴포넌트 작성 : vue-class-component
+
+> 위 설명을 발표를 위해 다시 한번 이해하기 쉽게 풀어봄  
+
+typescript를 를 vue에 원할하게 적용하기 위해서는 class 스타일로 컴포넌트를 작성할 필요가 있다.
+그 이유는 무엇일까? 
+
+[Kengo Hamasaki / Why I use vue-class-component](https://medium.com/haiiro-io/why-i-use-vue-class-component-472579a266b4)
+
+#### Counter 컴포넌트 만들어보기
+
+단일 파일 컴포넌트로 작성된 증감 기능이 있는 Counter 를 살펴보자.
+typescript가 적용되지 않은 상태이다.
+
+``` vue
+<template>
+  <div>
+    <p>Count : {{ count }}</p>
+    <button @click="decrement">-</button>
+    <button @click="increment">+</button>
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+   return {
+     count: 0 // count에 타입을 지정해줄 수 없다.
+   }
+  },
+  methods: {
+    increment() {
+      this.count++
+    },
+    decrement() {
+      this.count--
+    }
+  }
+}
+</script>
+
+```
+
+이러한 객체 구조의 컴포넌트 선언을 typescript와 함께 사용한다면 골치아픈 문제가 밣생 한다.
+`data()`가 객체를 리턴하는 형태이기에 data에 타입을 할당하기 곤란하다. 
+이러한 이유 때문에 vue 2.x 에서 typescript는 `vue-class-component` 를 이용하여 class 컴포넌트를 작성하는것이 권장된다.
+
+#### 클래스 기반 Counter 컴포넌트 만들어보기
+
+클래스 기반 컴포넌트는 `vue-property-decorator` 에서 불러들인 데코레이터를 붙여 인스턴스를 생성한다.
+
+``` vue
+<template>
+  <div>
+    <p>Count : {{ count }}</p>
+    <button @click="decrement">-</button>
+    <button @click="increment">+</button>
+  </div>
+</template>
+
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator';
+
+@Component
+// typescript 클래스 문법으로 작성 가능
+export default class TSClassCount extends Vue {
+  private count: number = 0; // count에 타입 지정 가능
+
+  private increment() {
+    this.count++;
+  }
+  private decrement() {
+    this.count--;
+  }
+}
+</script>
+```
+
+이처럼 컴포넌트를 작성하면 typescript의 class 작성 방식으로 컴포넌트를 작성할 수 있다.
+ 
+
+#### 1. 
+
 ### @Component
 
 ### @Prop

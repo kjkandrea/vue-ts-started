@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 import Home from '../views/Home.vue';
+import Example from '../views/Example.vue';
 import VuexUse from '../views/VuexUse.vue';
 import VuexModule from '../views/VuexModule.vue';
 
@@ -11,6 +12,11 @@ const routes: RouteConfig[] = [
     path: '/',
     name: 'Home',
     component: Home,
+  },
+  {
+    path: '/example',
+    name: 'Example',
+    component: Example,
   },
   {
     path: '/terms',

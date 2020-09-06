@@ -187,6 +187,12 @@ export default class TSClassCount extends Vue {
 ```
 
 이처럼 컴포넌트를 작성하면 typescript의 class 작성 방식으로 컴포넌트를 작성할 수 있다.
+
+### typescript with Vuex
+
+Vuex 에서 class 문법을 사용하고자 한다면 vuex-class 헬퍼를 사용하여 구현 가능하다.
+
+[vuex-class](https://github.com/ktsn/vuex-class) 
  
 
 #### 1. 
